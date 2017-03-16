@@ -1,0 +1,20 @@
+/* styles in src/style directory are applied to the whole page */
+body {
+  background: #6CD1EA;
+  color: #fff;
+}
+
+a {
+  color: #03A9F4;
+}
+
+main {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 20px;
+  display: block;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8em;
+}

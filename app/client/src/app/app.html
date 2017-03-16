@@ -1,0 +1,11 @@
+<main>
+  <h1 class="title">Notetaker</h1>
+  <new-note onsubmit="app.submitNote"></new-note>
+  <hr/>
+  <search-bar></search-bar>
+  <hr/>
+  <h3>Notes</h3>
+  <note ng-repeat="note in app.notes" note="note"></note>
+</main>
+<footer>
+</footer>
