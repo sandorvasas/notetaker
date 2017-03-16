@@ -53,6 +53,10 @@ class AppCtrl {
   deleteNote(id) {
     return NoteModel.delete({ id: id }).$promise;
   }
+
+  updateNote(note) {
+    return NoteModel.update(Object.assign({ id: note._id }, note)).$promise;
+  }
 }
 
 const MODULE_NAME = 'app';
