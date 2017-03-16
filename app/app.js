@@ -61,7 +61,7 @@ if (app.get('env') == 'development') {
 
 
 app.use('/api', api);
-
+app.use('/', express.static(path.join(process.cwd() || __dirname, '/client/dist') ));
 
 // 404
 app.use(function(req, res, next) {

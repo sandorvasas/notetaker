@@ -41,6 +41,7 @@
     "node-schedule": "^1.1.0",
     "nodemailer": "^2.4.2",
     "password-hash": "^1.2.2",
+    "path": "^0.12.7",
     "querystring": "^0.2.0",
     "redis": "^2.6.3",
     "request": "^2.78.0",
