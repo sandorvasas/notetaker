@@ -20,18 +20,20 @@ let NoteModel = null;
 
 class AppCtrl {
   constructor(Note) {
-    /**/
     NoteModel = Note;
+    this.searchTerm = {};
     this.listNotes();
   }
 
   listNotes(query) {
-    let req = {};
-    if (query) {
-      req.q = query;
-    }
+    if (typeof query === 'string') {
+      if (!query.length) {
+        this.searchTerm = {};
+      } else
+        this.searchTerm = { q: query };
+    } 
     this.notes = [];
-    NoteModel.find(req).$promise.then(((res) => {
+    NoteModel.find(this.searchTerm).$promise.then(((res) => {
       this.notes.push.apply(this.notes, res);
       console.log("app.notes", this.notes);
     }).bind(this), (err) => {
@@ -46,6 +48,10 @@ class AppCtrl {
       return;
     }
     return NoteModel.create(note).$promise;
+  }
+
+  deleteNote(id) {
+    return NoteModel.delete({ id: id }).$promise;
   }
 }
 

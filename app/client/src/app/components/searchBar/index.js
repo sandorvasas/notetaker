@@ -19,12 +19,8 @@ angular.module(COMPONENT_NAME, [])
     controller: function () {
       this.$onInit = function () {
         this.query = '';
-        this.onChange = function () {
-          if (!this.query.length > 0) {
-            this.parent.listNotes();
-            return;
-          }
-          this.parent.listNotes(this.query);
+        this.onChange = function (qq) {
+          this.parent.listNotes(qq);
         }
       }
     },

@@ -35,8 +35,9 @@ angular.module(COMPONENT_NAME, [])
           title: '',
           content: '',
         };
-        this.onSubmit =function (note) {
-          this.onsubmit(note).then(() => {
+        this.onSubmit = function (note) {
+          let promise = this.onsubmit(note);
+          if (promise) promise.then(() => {
             this.parent.listNotes();  
           });
         }
