@@ -1,9 +1,9 @@
 import {Router} from 'express';
-import note from './note';
+import notes from './notes';
 
 let api = new Router();
 
-api.use('/note', note);
+api.use('/notes', notes);
 
 export default api;
 

@@ -1,10 +1,10 @@
 {
-  "name": "node-starter",
+  "name": "note-taker",
   "version": "1.0.0",
-  "description": "Node.js ES7 SQL starter",
+  "description": "NoteTaker",
   "main": "index.js",
   "scripts": {
-    "test": "",
+    "test": "mocha --recursive --compilers js:babel-core/register --require babel-polyfill **/*.spec.js ",
     "dev": "nodemon index.js --debug",
     "start": "node index.js"
   },
@@ -19,6 +19,7 @@
     "body-parser": "*",
     "chalk": "^1.1.3",
     "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
     "expect.js": "^0.3.1",
     "express": "*",
     "express-session": "^1.13.0",
@@ -54,6 +55,8 @@
     "winston": "^2.3.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
     "nodemon": "^1.11.0"
   },
   "author": "sandorvasas",

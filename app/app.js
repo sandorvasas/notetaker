@@ -1,7 +1,8 @@
 import express from 'express';
 import chalk from 'chalk';
-
+import mongoose from 'mongoose';
 import api from './api';
+
 
 var session = require('express-session');
 var http = require('http');
@@ -29,6 +30,11 @@ process.on('uncaughtException', function (exception)  {
 var app = express();
 
 app.set('env', (process.env.NODE_ENV ? process.env.NODE_ENV.trim() : 'development') );
+
+if (app.get('env') == 'development') {
+  require('dotenv').config();
+}
+mongoose.connect(process.env.DB_ADDR);
 
 console.log("Server running in " + chalk.black.bgGreen(app.get('env').toUpperCase()) +  " environment");
 
@@ -67,15 +73,17 @@ app.use((err, req, res, next) => {
   console.error("ERROR: ", err);
 
   let response = {
-      message: "Something went wrong"
+    message: "Something went wrong"
   };
   if (app.get('env') !== 'production') {
-      response.error = ""  + err;
+    response.error = ""  + err;
   }
   res.status(500).json(response); 
 });
 
 
-http.createServer(app).listen(app.get('port'), () => {
+let server = http.createServer(app).listen(app.get('port'), () => {
   console.info("Server listening on port " + app.get('port'));
 });
+
+export default server;
