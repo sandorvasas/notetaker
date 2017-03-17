@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --recursive --compilers js:babel-core/register --require babel-polyfill **/*.spec.js ",
     "dev": "nodemon --debug --ignore './client/*' index.js ",
-    "heroku-postbuild":"cd client && npm run build && cd ..",
+    "heroku-postbuild":"cd client && npm install && npm run build && cd ..",
     "start": "node index.js"
   },
   "dependencies": {

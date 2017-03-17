@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Notetaker Client",
   "scripts": {
-    "build": "rimraf dist && webpack --bail --progress --profile",
+    "build": "rimraf dist && node ./node_modules/webpack/bin/webpack --bail --progress --profile",
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
@@ -17,7 +17,8 @@
     "angular-sanitize": "^1.6.3",
     "jquery": "^3.2.0",
     "ng-quill": "^3.0.1",
-    "quill": "^1.2.2"
+    "quill": "^1.2.2",
+    "webpack": "^2.2.0"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0",
