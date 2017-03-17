@@ -1,1 +1,0 @@
-# General Node ES7 Starter
