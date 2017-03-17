@@ -1,6 +1,10 @@
+import $ from "jquery"
 import angular from 'angular';
 
-import bootstrap from 'bootstrap';
+import 'quill/dist/quill.snow.css';
+import 'quill/dist/quill';
+import 'ng-quill';
+
 import ngResource from 'angular-resource';
 import models from './models';
 import note from './components/note';
@@ -8,6 +12,7 @@ import searchBar from './components/searchBar';
 import newNote from './components/newNote';
 
 import '../style/app.css';
+
 
 let app = () => {
   return {
@@ -62,6 +67,7 @@ class AppCtrl {
 const MODULE_NAME = 'app';
 
 angular.module(MODULE_NAME, [
+  'ngQuill',
   ngResource,
   models,
   note,

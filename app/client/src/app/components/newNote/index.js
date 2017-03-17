@@ -1,5 +1,4 @@
 import angular from 'angular';
-import 'bootstrap';
 import './styles.css';
 
 const COMPONENT_NAME = 'newNote';
@@ -19,7 +18,19 @@ angular.module(COMPONENT_NAME, [])
         </div>
         <div class='row form-group'>
           <div class='col-xs-12 col-sm-6'>
-          <input type='text' placeholder='Content' class='form-control' ng-model='$ctrl.note.content' />
+          <text-angular ng-model='$ctrl.note.content'></text-angular>
+            <ng-quill-editor ng-model="$ctrl.note.content">
+                <ng-quill-toolbar>
+                    <div>
+                        <span class="ql-formats">
+                            <button class="ql-bold" ng-attr-title="{{'Bold'}}"></button>
+                            <button class="ql-italic" ng-attr-title="{{'italic'}}"></button>
+                            <button class="ql-underline" ng-attr-title="{{'underline'}}"></button>
+                            <button class="ql-strike" ng-attr-title="{{'strike'}}"></button>
+                        </span>
+                    </div>
+                </ng-quill-toolbar>
+            </ng-quill-editor>
           </div>
         </div>
         <div class='row form-group'>

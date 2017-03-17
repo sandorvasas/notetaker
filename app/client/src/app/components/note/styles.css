@@ -1,5 +1,5 @@
 .note {
-  background: #F8EFB6;
+  background: #ddd;
   color: #666;
   width: auto;
   padding: 4px;
@@ -12,13 +12,23 @@
   font-size: 8pt;
   font-weight: bold;
   cursor: pointer;
-  color: #005000;
+  color: #fff;
+  background: #333;
+  border-radius: 4px;
+  padding: 3px;
+  position: relative;
+  top: -3px;
 }
 
 .btn-del {
-  margin-left: 10px;
+  margin-left: 2px;
   font-size: 8pt;
   font-weight: bold;
   cursor: pointer;
-  color: #e00000;
+  color: #fff;
+  background: #333;
+  border-radius: 4px;
+  padding: 3px;
+  position: relative;
+  top: -3px;
 }

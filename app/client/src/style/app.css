@@ -1,6 +1,5 @@
-/* styles in src/style directory are applied to the whole page */
 body {
-  background: #6CD1EA;
+  background: #fff;
   color: #333;
   font-weight: light;
 }
@@ -9,7 +8,7 @@ a {
   color: #03A9F4;
 }
 hr {
-  border: 1px solid #333;
+  border: 1px solid #00aaa0;
 }
 input {
   border-radius: 5px;
@@ -19,14 +18,18 @@ input {
   border: none;
   box-shadow: inset 0px 0px 7px 0px rgba(112,112,112,1);
 }
-button {
+button.btn {
+  background: #00aaa0;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
   cursor: pointer;
   border-radius: 5px;
   padding: 8px;
   margin-bottom: 5px;
   outline: none;
   border: none;
-}
+}*/
 main {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 20px;
